@@ -512,6 +512,91 @@ img {
   color: #fff;
 }
 
+/* ABOUT__BANNER */
+.about__banner {
+  padding: 7rem;
+}
+
+.about__banner .about__banner__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.about__banner .about__banner__wrapper .about__banner__text h1 {
+  color: #ffa700;
+  font-size: 8.3rem;
+  padding-bottom: 3rem;
+  font-weight: bold;
+}
+
+.about__banner .about__banner__wrapper .about__banner__text p {
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: justify;
+  max-width: 40rem;
+}
+
+.about__banner .about__banner__wrapper .about__banner__icon ul {
+  display: flex;
+  gap: 2rem;
+  font-size: 3rem;
+  color: #ffa700;
+}
+.about__banner .about__banner__wrapper .about__banner__icon ul li a {
+  color: #ffa700;
+}
+
+/* ABOUT__PROJECT */
+.about__project {
+  background-color: #2b2b2b;
+  padding: 4rem;
+}
+
+.about__project .about__project__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about__project .about__project__text h2 {
+  color: #ffa700;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.about__project .about__project__text p {
+  color: #fff;
+  font-size: 2rem;
+  padding-bottom: 10rem;
+}
+
+.about__project .about__project__wrapper .about__project__card {
+  background-color: #fff;
+  max-width: 35.7rem;
+  border-radius: 3rem;
+}
+.about__project
+  .about__project__wrapper
+  .about__project__card
+  .project__card
+  h2 {
+  color: #ffa700;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.about__project
+  .about__project__wrapper
+  .about__project__card
+  .project__card
+  p {
+  margin: 2rem;
+  color: #2b2b2b;
+  text-align: justify;
+  padding-bottom: 5rem;
+  font-size: 1.5rem;
+}
+
 /* repeatable patter */
 
 .btn {
@@ -539,4 +624,3 @@ img {
   background-color: #fff;
   color: #2b2b2b;
 }
-
