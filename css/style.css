@@ -107,6 +107,7 @@ a {
 }
 img {
   max-width: 100%;
+  width: 100%;
 }
 
 /* HEADER */
@@ -120,7 +121,8 @@ img {
 .header {
   padding: 2rem 0;
   background-color: #2b2b2b;
-  /* box-shadow: rgba(248, 4, 134, 0.7) 0px 8px 24px; */
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
 .header .header__wrapper .branding img {
@@ -136,6 +138,7 @@ img {
 .header .header__wrapper .branding h3 {
   color: #fff;
   font-size: 2.5rem;
+  display: flex;
 }
 
 .header .header__wrapper .branding span {
@@ -175,6 +178,7 @@ img {
     z-index: 999;
   }
   .header .header__nav nav ul {
+    padding-top: 3rem;
     background: #fff;
     position: absolute;
     right: -100rem;
@@ -586,36 +590,30 @@ img {
     margin-top: 3rem;
     justify-content: center;
   }
-
   .about__banner .about__banner__img img {
     display: none;
   }
 }
 
 /* ABOUT__PROJECT */
-
 .about__project {
   background-color: #2b2b2b;
   padding: 4rem;
 }
-
 .about__project .about__project__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
 .about__project .about__project__text h2 {
   color: #ffa700;
   font-size: 4rem;
   font-weight: bold;
 }
-
 .about__project .about__project__text p {
   color: #fff;
   font-size: 2rem;
   padding-bottom: 10rem;
 }
-
 .about__project .about__project__wrapper .about__project__card {
   background-color: #fff;
   max-width: 35.7rem;
@@ -631,7 +629,6 @@ img {
   padding: 2rem;
   font-size: 1.5rem;
 }
-
 .about__project
   .about__project__wrapper
   .about__project__card
@@ -643,7 +640,6 @@ img {
   padding-bottom: 5rem;
   font-size: 1.5rem;
 }
-
 @media screen and (max-width: 480px) {
   .about__project .about__project__wrapper {
     grid-template-columns: 1fr;
@@ -657,53 +653,44 @@ img {
 .services__banner {
   padding: 7rem;
 }
-
 .services__banner .services__banner__wrapper {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-
+  align-items: center; */
+  display: flex;
+  justify-content: space-between;
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 .services__banner .services__banner__wrapper .services__banner__text {
-  max-width: 40rem;
+  max-width: 50rem;
 }
-
 .services__banner .services__banner__wrapper .services__banner__text h1 {
   color: #ffa700;
   font-size: 5rem;
   font-weight: bold;
   margin: 3rem 0;
 }
-
 .services__banner .services__banner__wrapper .services__banner__text p {
   margin-bottom: 2rem;
   text-align: justify;
   font-size: 1.5rem;
 }
-
 .services__banner .service__banner__img img {
   position: relative;
   height: 500;
 }
-
 .services__banner .services__banner__wrapper .services__banner__text h2 {
   font-size: 1.5rem;
 }
-
 .services__banner .services__banner__wrapper .services__banner__text h3 {
   color: #ffa700;
   font-size: 3rem;
 }
-
 .services__banner .services__banner__wrapper .services__banner__text h4 {
   font-style: italic;
-  max-width: 20rem;
 }
-
 .services__banner .arrow__down a {
   display: flex;
   justify-content: center;
@@ -711,16 +698,31 @@ img {
   font-size: 3rem;
 }
 
-/* Mobile Services__BANNER */
+/* Mobile Services__banner */
 @media screen and (max-width: 480px) {
-  .services__banner {
-    flex-direction: column-reverse;
-    padding-top: 13rem;
+  .services__section {
+    padding-top: 7rem;
   }
   .services__banner .services__banner__wrapper {
     padding: 0;
   }
   .services__banner .services__banner__wrapper .services__banner__text h1 {
+    text-align: center;
+  }
+  .services__banner .services__banner__wrapper:nth-child(odd) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .services__banner .services__banner__wrapper:nth-child(even) {
+    flex-direction: column;
+  }
+  .services__banner .services__banner__text h2 {
+    text-align: center;
+  }
+  .services__banner .services__banner__text h3 {
+    text-align: center;
+  }
+  .services__banner .services__banner__text h4 {
     text-align: center;
   }
 }
@@ -729,18 +731,14 @@ img {
 .updates {
   padding: 7rem;
 }
-
 .updates .container h1 {
   color: #ffa700;
   font-size: 4rem;
   font-weight: bold;
-
 }
-
 .updates .container p {
   font-size: 2rem;
 }
-
 .updates .updates__wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -752,30 +750,27 @@ img {
   padding-top: 6rem;
   width: 100%;
 }
-
 .updates .updates__wrapper .updates__left .updates__content ul {
   display: flex;
   gap: 2rem;
   padding-top: 2rem;
 }
-
 .updates .updates__wrapper .updates__left .updates__content h2 {
   padding-top: 2rem;
   font-size: 2rem;
   font-weight: bold;
   color: #ffa700;
 }
-
 .updates .updates__wrapper .updates__left .updates__content h3 {
   padding-top: 2rem;
   font-size: 1.3rem;
   margin-bottom: 4rem;
 }
-
 .updates .updates__wrapper .updates__left .updates__content a {
   padding-top: 3rem;
   color: #ffa700;
 }
+
 /* right side */
 .updates .updates__wrapper .updates__right h3 {
   color: #ffa700;
@@ -786,38 +781,31 @@ img {
 .updates .updates__wrapper .updates__right table {
   width: 100%;
 }
-
 .updates .updates__wrapper .updates__right table tr td {
   font-size: 1.5rem;
 }
-
 .updates .updates__wrapper .updates__right tr {
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
 }
-
 .updates .updates__wrapper .updates__content__right ul {
   display: flex;
   align-items: center;
 }
-
 .updates .updates__wrapper .updates__content__right ul span {
   max-width: 21rem;
   margin-left: 3rem;
 }
-
 .updates .updates__wrapper .updates__content__right ul span h4 {
   margin-bottom: 2rem;
   gap: 3rem;
   display: flex;
   justify-content: space-between;
 }
-
 .updates .updates__wrapper .updates__content__right h4 {
   font-weight: bold;
 }
-
 .updates .updates__wrapper .updates__content__right:last-child ul {
   display: flex;
   flex-wrap: wrap;
@@ -830,27 +818,19 @@ img {
   .updates {
     flex-direction: column-reverse;
     padding: 13rem 3rem;
-    /* text-align: center; */
   }
-  
   .updates h1 {
     text-align: center;
   }
-
   .updates p {
     text-align: center;
   }
-
   .updates .updates__wrapper .updates__left h2 {
     text-align: center;
   }
   .updates .updates__wrapper .updates__left h3 {
     text-align: center;
   }
-  /* .updates .updates__wrapper .updates__left .updates__content a {
-    text-align: center;
-  } */
-
   .updates .updates__wrapper {
     padding: 0;
     display: flex;
@@ -859,11 +839,122 @@ img {
   .updates .updates__wrapper .updates__text h1 {
     text-align: center;
   }
+}
+
+/* CONTACT */
+.contact {
+  padding-top: 7rem;
+  background-color: #2b2b2b;
+  height: 79.7vh;
+}
+.contact .contact__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact .container h1 {
+  color: #ffa700;
+  font-weight: bold;
+  margin-bottom: 4rem;
+  font-size: 4rem;
+}
+.contact .container p {
+  max-width: 60rem;
+
+  color: #fff;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+.contact .contact__wrapper li {
+  display: flex;
+  gap: 3rem;
+}
+.contact .contact__wrapper .contact__left ul li p {
+  font-size: 2rem;
+}
+.contact .contact__wrapper .contact__left ul li {
+  color: #ffa700;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.contact .contact__wrapper .contact__left .contact__icon ul {
+  display: flex;
+  font-size: 3rem;
+  gap: 1rem;
+}
+.contact .contact__wrapper .contact__left .contact__icon a {
+  color: #fff;
+}
+.contact .contact__wrapper .contact__right input {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.contact .contact__wrapper .contact__right input:last-child {
+  width: 100%;
+  height: 10rem;
+  padding-bottom: 6rem;
+}
+.contact .contact__wrapper .contact__right a {
+  float: right;
+}
+@media screen and (max-width: 480px) {
+  .contact {
+    padding-top: 16rem;
+    height: 120vh;
   }
-
-
+  .contact .container p {
+    max-width: 100%;
+    text-align: center;
+  }
+  .contact .container h1 {
+    text-align: center;
+  }
+  .contact .container p:first-child {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .contact .contact__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .contact__wrapper .contact__left .contact__icon ul {
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* Contact__tablet */
+@media screen and (max-width: 740px) {
+  .contact {
+    text-align: center;
+    height: 90vh;
+  }
+  .contact .container p {
+    max-width: 70rem;
+    text-align: center;
+  }
+  .contact .contact__wrapper .contact__left ul li p{
+    font-size: 1rem;
+    margin-right: 4rem;
+  }
+  .contact .contact__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .contact__wrapper .contact__left ul li {
+    font-size: 2rem;
+    margin-bottom: -0.2rem;
+  }
+  .contact .contact__wrapper .contact__left ul{
+    align-items: center;
+  }
+  .contact .contact__wrapper .contact__left .contact__icon a{
+    margin-bottom: 2.5rem;
+    align-items: center;
+  }
+}
 /* repeatable patter */
-
 .btn {
   display: inline-block;
   border: 1px solid transparent;
@@ -935,7 +1026,6 @@ img {
 }
 
 .updates .updates__left .updates__content:last-child {
-
   border-bottom: none;
 }
 
@@ -963,4 +1053,14 @@ img {
 .btn.bg---white:hover {
   background-color: #2b2b2b;
   color: #fff;
+}
+
+/* CONTACT__BANNER__btn */
+.btn.bg----yellow {
+  background-color: #ffa700;
+  color: #fff;
+}
+.btn.bg----yellow:hover {
+  background-color: #fff;
+  color: #2b2b2b;
 }
